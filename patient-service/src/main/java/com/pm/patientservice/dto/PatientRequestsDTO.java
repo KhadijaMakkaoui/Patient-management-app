@@ -16,6 +16,9 @@ public class PatientRequestsDTO {
     @NotBlank(message = "Date of birth is required")
     private String dateOfBirth;
 
+    @NotBlank(message = "Adress is required")
+    private String adress;
+
     @NotBlank(message = "Registred date is required")
     private String registredDate;
 
@@ -49,5 +52,13 @@ public class PatientRequestsDTO {
 
     public void setRegistredDate(@NotBlank(message = "Registred date is required") String registredDate) {
         this.registredDate = registredDate;
+    }
+
+    public @NotBlank(message = "Adress is required") String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(@NotBlank(message = "Adress is required") String adress) {
+        this.adress = adress;
     }
 }
